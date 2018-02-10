@@ -12,16 +12,23 @@ import {
 } from 'material-ui/Table';
 
 export default () => {
+
+    this.state = {
+        showCheckboxes: false,
+    };
+
     return (
         <Table>
-            <TableHeader>
+            <TableHeader
+                displaySelectAll={this.state.showCheckboxes}
+                adjustForCheckbox={this.state.showCheckboxes}>
                 <TableRow>
                     <TableHeaderColumn>No.</TableHeaderColumn>
                     <TableHeaderColumn>Name</TableHeaderColumn>
                     <TableHeaderColumn>Skills</TableHeaderColumn>
                 </TableRow>
             </TableHeader>
-            <TableBody>
+            <TableBody displayRowCheckbox={this.state.showCheckboxes} >
                 { Players.map(player =>
                     <TableRow>
                         <TableRowColumn>

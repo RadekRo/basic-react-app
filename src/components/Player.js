@@ -18,7 +18,7 @@ export default (props) => {
                 actAsExpander={false}
                 showExpandableButton={false}
             />
-            <Link to='/'style={{ textDecoration: 'none', color: 'green', fontSize: '20px', padding: '15px' }}>&larr; Return to player list</Link>
+            <Link to='/' style={{ textDecoration: 'none', color: 'green', fontSize: '20px', padding: '15px' }}>&larr; Return to player list</Link>
         </Card>
 
         :
